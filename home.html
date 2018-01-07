@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list noline>
+        <ion-item>
+            <ion-label>
+                Notify me at:
+            </ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" name="NTime" [(ngModel)]="NTime">{{NTime}}</ion-datetime>
+        </ion-item>
+    </ion-list>
+    <button (click)="addNotifications(NTime)" ion-button color="primary" full>Schedule</button>
+    <button (click)="cancelAll()" ion-button color="danger" full>Cancel</button>
+
+</ion-content>
